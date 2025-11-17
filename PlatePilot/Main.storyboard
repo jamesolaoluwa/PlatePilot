@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TabBarController">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TabBarControllerScene">
+            <objects>
+                <tabBarController id="TabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TabBar">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HomeNavController" kind="relationship" relationship="viewControllers" id="HomeSegue"/>
+                        <segue destination="PlannerNavController" kind="relationship" relationship="viewControllers" id="PlannerSegue"/>
+                        <segue destination="GroceryNavController" kind="relationship" relationship="viewControllers" id="GrocerySegue"/>
+                        <segue destination="ProfileNavController" kind="relationship" relationship="viewControllers" id="ProfileSegue"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TabBarFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="0"/>
+        </scene>
+        
+        <!--Home-->
+        <scene sceneID="HomeNavControllerScene">
+            <objects>
+                <navigationController id="HomeNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="HomeTabBarItem"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HomeNavBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HomeViewController" kind="relationship" relationship="rootViewController" id="HomeRootSegue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HomeNavFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-600"/>
+        </scene>
+        
+        <!--Home View Controller-->
+        <scene sceneID="HomeViewControllerScene">
+            <objects>
+                <viewController id="HomeViewController" customClass="HomeViewController" customModule="PlatePilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HomeTableView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HomeSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HomeTableView" firstAttribute="top" secondItem="HomeSafeArea" secondAttribute="top" id="HomeTableViewTop"/>
+                            <constraint firstItem="HomeTableView" firstAttribute="leading" secondItem="HomeSafeArea" secondAttribute="leading" id="HomeTableViewLeading"/>
+                            <constraint firstItem="HomeSafeArea" firstAttribute="trailing" secondItem="HomeTableView" secondAttribute="trailing" id="HomeTableViewTrailing"/>
+                            <constraint firstItem="HomeSafeArea" firstAttribute="bottom" secondItem="HomeTableView" secondAttribute="bottom" id="HomeTableViewBottom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="HomeNavigationItem"/>
+                    <connections>
+                        <outlet property="tableView" destination="HomeTableView" id="HomeTableViewOutlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HomeViewFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-600"/>
+        </scene>
+        
+        <!--Planner-->
+        <scene sceneID="PlannerNavControllerScene">
+            <objects>
+                <navigationController id="PlannerNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Planner" image="calendar" catalog="system" id="PlannerTabBarItem"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PlannerNavBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PlannerViewController" kind="relationship" relationship="rootViewController" id="PlannerRootSegue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlannerNavFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-200"/>
+        </scene>
+        
+        <!--Planner View Controller-->
+        <scene sceneID="PlannerViewControllerScene">
+            <objects>
+                <viewController id="PlannerViewController" customClass="PlannerViewController" customModule="PlatePilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PlannerView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PlannerSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Planner" id="PlannerNavigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlannerViewFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-200"/>
+        </scene>
+        
+        <!--Grocery-->
+        <scene sceneID="GroceryNavControllerScene">
+            <objects>
+                <navigationController id="GroceryNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Grocery" image="cart.fill" catalog="system" id="GroceryTabBarItem"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GroceryNavBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GroceryViewController" kind="relationship" relationship="rootViewController" id="GroceryRootSegue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GroceryNavFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="200"/>
+        </scene>
+        
+        <!--Grocery View Controller-->
+        <scene sceneID="GroceryViewControllerScene">
+            <objects>
+                <viewController id="GroceryViewController" customClass="GroceryViewController" customModule="PlatePilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GroceryView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GroceryTableView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GrocerySafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GroceryTableView" firstAttribute="top" secondItem="GrocerySafeArea" secondAttribute="top" id="GroceryTableViewTop"/>
+                            <constraint firstItem="GroceryTableView" firstAttribute="leading" secondItem="GrocerySafeArea" secondAttribute="leading" id="GroceryTableViewLeading"/>
+                            <constraint firstItem="GrocerySafeArea" firstAttribute="trailing" secondItem="GroceryTableView" secondAttribute="trailing" id="GroceryTableViewTrailing"/>
+                            <constraint firstItem="GrocerySafeArea" firstAttribute="bottom" secondItem="GroceryTableView" secondAttribute="bottom" id="GroceryTableViewBottom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grocery" id="GroceryNavigationItem"/>
+                    <connections>
+                        <outlet property="tableView" destination="GroceryTableView" id="GroceryTableViewOutlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GroceryViewFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="200"/>
+        </scene>
+        
+        <!--Profile-->
+        <scene sceneID="ProfileNavControllerScene">
+            <objects>
+                <navigationController id="ProfileNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="ProfileTabBarItem"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ProfileNavBar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ProfileViewController" kind="relationship" relationship="rootViewController" id="ProfileRootSegue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ProfileNavFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="600"/>
+        </scene>
+        
+        <!--Profile View Controller-->
+        <scene sceneID="ProfileViewControllerScene">
+            <objects>
+                <viewController id="ProfileViewController" customClass="ProfileViewController" customModule="PlatePilot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ProfileView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ProfileSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="ProfileNavigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ProfileViewFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
+</document>
