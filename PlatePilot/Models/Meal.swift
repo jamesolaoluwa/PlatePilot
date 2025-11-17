@@ -7,24 +7,52 @@
 
 import Foundation
 
-struct Meal {
-    var id: UUID
+struct Ingredient: Codable, Equatable {
     var name: String
-    var description: String
-    var ingredients: [String]
-    var instructions: String
-    var prepTime: Int // in minutes
-    var servings: Int
-    var imageURL: String?
+    var quantityDescription: String
+    var isCheckedForGrocery: Bool
     
-    init(id: UUID = UUID(), name: String, description: String, ingredients: [String], instructions: String, prepTime: Int, servings: Int, imageURL: String? = nil) {
+    init(name: String, quantityDescription: String, isCheckedForGrocery: Bool = false) {
+        self.name = name
+        self.quantityDescription = quantityDescription
+        self.isCheckedForGrocery = isCheckedForGrocery
+    }
+}
+
+struct Meal: Codable, Equatable {
+    var id: String
+    var name: String
+    var imageURL: String?
+    var instructions: String
+    var ingredients: [Ingredient]
+    var calories: Int
+    var estimatedCost: Double
+    var cookTimeMinutes: Int
+    var isFavorite: Bool
+    
+    init(id: String, name: String, imageURL: String? = nil, instructions: String, ingredients: [Ingredient], calories: Int = 0, estimatedCost: Double = 0.0, cookTimeMinutes: Int = 0, isFavorite: Bool = false) {
         self.id = id
         self.name = name
-        self.description = description
-        self.ingredients = ingredients
-        self.instructions = instructions
-        self.prepTime = prepTime
-        self.servings = servings
         self.imageURL = imageURL
+        self.instructions = instructions
+        self.ingredients = ingredients
+        self.calories = calories
+        self.estimatedCost = estimatedCost
+        self.cookTimeMinutes = cookTimeMinutes
+        self.isFavorite = isFavorite
+    }
+    
+    // MARK: - Convenience Properties
+    
+    var caloriesLabelText: String {
+        return "\(calories) cal"
+    }
+    
+    var costLabelText: String {
+        return String(format: "$%.2f", estimatedCost)
+    }
+    
+    var cookTimeLabelText: String {
+        return "\(cookTimeMinutes) min"
     }
 }

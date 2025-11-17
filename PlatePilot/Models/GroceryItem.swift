@@ -7,18 +7,16 @@
 
 import Foundation
 
-struct GroceryItem {
-    var id: UUID
+struct GroceryItem: Codable, Equatable {
+    var id: String
     var name: String
-    var quantity: String
-    var category: String
-    var isPurchased: Bool
+    var quantityDescription: String
+    var isCompleted: Bool
     
-    init(id: UUID = UUID(), name: String, quantity: String, category: String, isPurchased: Bool = false) {
+    init(id: String = UUID().uuidString, name: String, quantityDescription: String, isCompleted: Bool = false) {
         self.id = id
         self.name = name
-        self.quantity = quantity
-        self.category = category
-        self.isPurchased = isPurchased
+        self.quantityDescription = quantityDescription
+        self.isCompleted = isCompleted
     }
 }
