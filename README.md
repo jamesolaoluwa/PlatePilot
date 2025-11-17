@@ -8,7 +8,7 @@ PlatePilot is a smart student meal planning app that helps users eat healthier a
 
 ## Product Spec
 
-### 1. User Stories (Required)
+### 1. User Stories
 - User can browse meals in a recipe feed
 - User can tap a meal to see details
 - User can save meals to favorites
