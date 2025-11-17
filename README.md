@@ -115,10 +115,10 @@ Using:
 **Olaoluwa James-Owolabi**  
 *CodePath iOS 101 | Capstone Project | 2025*
 
----
+
 
 ## 🌟 Inspiration
-> Students deserve healthy meals without breaking their budget.  
-> PlatePilot makes planning simple, affordable, and structured.
+- Students deserve healthy meals without breaking their budget.  
+- PlatePilot makes planning simple, affordable, and structured.
 
----
+
