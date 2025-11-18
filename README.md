@@ -9,7 +9,14 @@ PlatePilot helps students plan weekly meals efficiently based on cost and nutrit
 
 ---
 
-## 🎯 Key Features
+## � Demo
+
+Below is a short demo of PlatePilot in action — click or view the GIF to see the app flow.
+
+![PlatePilot Demo](PlatePilotDemo.gif)
+
+
+## �🎯 Key Features
 - 🍽 Browse meals via recipe API feed
 - 📌 Detailed nutrition & cost breakdown for each meal
 - 🗓 Weekly planner (Mon–Sun)
