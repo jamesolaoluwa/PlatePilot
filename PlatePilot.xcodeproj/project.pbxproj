@@ -18,6 +18,7 @@
 		1AF58FC22ECBE8400020F85F /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF58FC02ECBE8400020F85F /* MealTableViewCell.swift */; };
 		1AF58FC32ECBE8400020F85F /* GroceryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF58FBF2ECBE8400020F85F /* GroceryItemCell.swift */; };
 		1AF58FC62ECBE8740020F85F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF58FC42ECBE8740020F85F /* Extensions.swift */; };
+		1AF58FC82ECBFB280020F85F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF58FC72ECBFB280020F85F /* SplashViewController.swift */; };
 		A1000001000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002000000000000001 /* AppDelegate.swift */; };
 		A1000003000000000000001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004000000000000001 /* SceneDelegate.swift */; };
 		A1000005000000000000001 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006000000000000001 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 		1AF58FBF2ECBE8400020F85F /* GroceryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemCell.swift; sourceTree = "<group>"; };
 		1AF58FC02ECBE8400020F85F /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		1AF58FC42ECBE8740020F85F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1AF58FC72ECBFB280020F85F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A1000002000000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1000004000000000000001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1000006000000000000001 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		A1000031000000000000001 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AF58FC72ECBFB280020F85F /* SplashViewController.swift */,
 				1AF58FA82ECBE5470020F85F /* MealDetailViewController.swift */,
 				A1000006000000000000001 /* HomeViewController.swift */,
 				A1000008000000000000001 /* PlannerViewController.swift */,
@@ -231,6 +234,7 @@
 				A1000005000000000000001 /* HomeViewController.swift in Sources */,
 				A1000007000000000000001 /* PlannerViewController.swift in Sources */,
 				A1000009000000000000001 /* GroceryViewController.swift in Sources */,
+				1AF58FC82ECBFB280020F85F /* SplashViewController.swift in Sources */,
 				1AF58FC22ECBE8400020F85F /* MealTableViewCell.swift in Sources */,
 				1AF58FC32ECBE8400020F85F /* GroceryItemCell.swift in Sources */,
 				A1000011000000000000001 /* ProfileViewController.swift in Sources */,

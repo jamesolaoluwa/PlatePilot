@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaunchScreenViewController">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaunchScreenViewController">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,20 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlatePilot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaunchScreenLabel">
-                                <rect key="frame" x="20" y="437.5" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-cu-5eH">
+                                <rect key="frame" x="62.5" y="347" width="289.5" height="202"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fork.knife.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-9Q-fA0">
+                                        <rect key="frame" x="104.5" y="0.5" width="80" height="79"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="YwJ-45-O7Z"/>
+                                            <constraint firstAttribute="width" constant="80" id="fv6-Wq-Nhx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaunchScreenLabel">
+                                        <rect key="frame" x="76.5" y="100" width="136.5" height="41"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="PlatePilot">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.036173063986292275" green="0.039889656876628647" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="34"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ng-kE-7Lc">
+                                        <rect key="frame" x="0.0" y="161" width="289.5" height="41"/>
+                                        <string key="text">Eat smarter. Save more. Live healthier.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LaunchScreenSafeArea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LaunchScreenLabel" firstAttribute="centerX" secondItem="LaunchScreenView" secondAttribute="centerX" id="LaunchScreenLabelCenterX"/>
-                            <constraint firstItem="LaunchScreenLabel" firstAttribute="centerY" secondItem="LaunchScreenView" secondAttribute="centerY" id="LaunchScreenLabelCenterY"/>
-                            <constraint firstItem="LaunchScreenLabel" firstAttribute="leading" secondItem="LaunchScreenSafeArea" secondAttribute="leading" constant="20" id="LaunchScreenLabelLeading"/>
-                            <constraint firstItem="LaunchScreenSafeArea" firstAttribute="trailing" secondItem="LaunchScreenLabel" secondAttribute="trailing" constant="20" id="LaunchScreenLabelTrailing"/>
+                            <constraint firstItem="d0D-cu-5eH" firstAttribute="centerX" secondItem="LaunchScreenView" secondAttribute="centerX" id="R0D-3L-J9H"/>
+                            <constraint firstItem="d0D-cu-5eH" firstAttribute="centerX" secondItem="LaunchScreenView" secondAttribute="centerX" id="iRI-Tl-HEP"/>
+                            <constraint firstItem="d0D-cu-5eH" firstAttribute="centerY" secondItem="LaunchScreenView" secondAttribute="centerY" id="w9K-NR-dIO"/>
+                            <constraint firstItem="d0D-cu-5eH" firstAttribute="centerY" secondItem="LaunchScreenView" secondAttribute="centerY" id="zXh-0a-Qix"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,8 +68,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
