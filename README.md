@@ -1,6 +1,6 @@
 # 🥗 PlatePilot
 **Eat smarter. Save more. Live healthier.**  
-A smart meal-planning app built for college students to help balance nutrition and budget while organizing weekly meals.
+A smart meal-planning app I built for college students like myself to help balance nutrition and budget while organizing weekly meals.
 
 ---
 
